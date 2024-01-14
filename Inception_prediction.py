@@ -18,10 +18,10 @@ import glob as glob
 from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.optimizers import Adam
 
-train_df = pd.read_csv("train_7/5days/train-3.csv")
-test_df = pd.read_csv("test_7/5days/test-3.csv")
-r_df = pd.read_csv("train_7/5days/train-2.csv")
-e_df = pd.read_csv("test_7/5days/test-2.csv")
+train_df = pd.read_csv("train_5/5days/train-3.csv")
+test_df = pd.read_csv("test_5/5days/test-3.csv")
+r_df = pd.read_csv("train_5/5days/train-2.csv")
+e_df = pd.read_csv("test_5/5days/test-2.csv")
 #train_df= train_df.sample(frac=1, random_state=0)
 print(f"Total images for training: {len(train_df)}")
 print(f"Total images for testing: {len(test_df)}")
@@ -30,8 +30,8 @@ print(f"Total images for testing: {len(test_df)}")
 y_train = pd.get_dummies(r_df["event"])
 y_test = pd.get_dummies(e_df["event"])
 
-train_dir = "train_7/5days/"
-test_dir = "test_7/5days/"
+train_dir = "train_5/5days/"
+test_dir = "test_5/5days/"
 
 # In[58]:
 x_train = []
